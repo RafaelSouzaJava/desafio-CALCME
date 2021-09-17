@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="content first-content">
+        <div class="first-column">
+            <h2 class="title title-primary">Bem vindo!</h2>
+            <p class="description description-primary">Sistema desafio CALCME</p>
+            <p class="description description-primary">crie sua conta para o acesso </p>
+            <p class="description description-primary">ou entre com login e senha admin </p>
+            <button type="button" class="btn btn-primary" routerLink="/cadastro" >Criar conta</button>
+        </div>    
+        <div class="second-column">
+            <h2 class="title title-second">Entra no Sistema</h2>           
+            
+            <form class="form">
+                <label class="label-input" for="">
+                    <i class="far fa-user icon-modify"></i>
+                    <input type="text" [(ngModel)]="creds.login" id="login" name="login" placeholder="login" required>
+                </label>   
+                
+                <label class="label-input" for="">
+                    <i class="fas fa-lock icon-modify"></i>
+                    <input type="password" id="senha" [(ngModel)]="creds.senha" name="senha" placeholder="Password" required>
+                </label>
+                
+                
+                <button type="button" class="btn btn-second" (click)="login()">entar</button>        
+            </form>
+        </div>
+    </div>   
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="content first-content">
+        <div class="first-column">
+            <h2 class="title title-primary">Bem vindo!</h2>
+            <p class="description description-primary">Sistema desafio CALCME</p>
+            <p class="description description-primary">crie sua conta para o acesso </p>
+            <p class="description description-primary">ou entre com login e senha admin </p>
+            <button type="button" class="btn btn-primary" routerLink="">login</button>
+        </div>    
+        <div class="second-column">
+            <h2 class="title title-second">Cadastro do Sistema</h2>           
+            
+            <form class="form" [formGroup]="form"  (ngSubmit)="cadastar(); $event.preventDefault()">
+                <label class="label-input" for="">
+                    <i class="far fa-user icon-modify"></i>
+                    <input formControlName="login" type="text" id="user" placeholder="login" required>
+                </label>   
+                
+                <label class="label-input" for="">
+                    <i class="fas fa-lock icon-modify"></i>
+                    <input formControlName="senha" type="password" id="senha" placeholder="Password" required>
+                </label>
+                
+                
+                <button class="btn btn-second" [disabled]="form.invalid">Cadastrar</button>        
+            </form>
+        </div>
+    </div>   
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title th:remove="all">Email de Confirmation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	
+</head>
+
+<body style="background-color: #E0EEEE;">
+	<div style="font-family: sans-serif;">
+	
+		<h1>
+			Cliente: <span th:text="${cliente.nome}"></span>
+		</h1>
+
+		<h3 style="color: #00C5CD;">Dados Informados:</h3>
+		<table border="1" style="text-align: center; margin-bottom: 1em;">
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Telefone</th>
+			</tr>
+			<td th:text="${cliente.nome}">nome</td>
+			<td th:text="${cliente.email}">email</td>
+			<td th:text="${cliente.telefone}">telefone</td>
+		</table>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div>
+	<h2 style="text-align: center;">Obrigado por tudo.</h2>
+	<p>Agradeço imensamente pela oportunidade de participar desse desafio, foi uma experiencia incrivel.</p>
+	
+	<p>Sigo a disposição</p>
+	<p>Atencionsamente, Rafael de Souza Alves</p>
+	</div>
+</body>
+
+</html>
